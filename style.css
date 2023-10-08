@@ -6,11 +6,11 @@
 
 .chatbot header{
     width: 100%;
-    max-width: 100%;
+    max-width: 1000px;
     margin: 0 auto;
     text-align: center;
     color:rgb(35, 44, 35);
-    background: #777284;
+    /* background: #777284; */
     font-weight:bold;
 }
 .chatbot{
@@ -18,11 +18,11 @@
     max-width: 1000px; /*Limiting maximum width for larger screens */
     margin: 0 auto;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     display: flex;
     flex-direction: column;
     height: 100vh; /*Taking the full viewport height */
-    background-color: #f5f5f5; /*A light gray background for the entire chatbot */
+    background-color: #FBEAEB; /*A light gray background for the entire chatbot */
 
 }
 .chatbot .chat_body{
@@ -33,34 +33,60 @@
     list-style: none;
     flex-direction: column;
 }
+.incoming_chat p {
+    display: inline-block; 
+    /* margin-right: 10px; Optional: Adds some spacing between the text and the icon */
+}
+
+.incoming_chat .fa-robot {
+    display: inline-block;
+}
 .incoming_chat, .outgoing_chat{
     max-width: 70%;
     padding: 10px 15px;
     margin-bottom: 10px;
-    border-radius: 15px;
+    border-radius: 10px 10px 10px 0;
     word-wrap: break-word;
     padding-bottom: 0;
 }
+.outgoing_chat{
+    border-radius: 10px 10px 0 10px;
+}
 .incoming_chat{
     align-self: flex-start;
-    background-color: #e6e6e6;
+    /* color: white; */
+    background-color:rgb(253, 253, 253);
 }
 .outgoing_chat{
     align-self: flex-end;
     margin-right: 5px;
-    background-color: #777284;
+    background-color: #00539C;
+    color: white;
     padding-bottom: 0;
 }
+.chat_footer{
+    position: absolute;
+    bottom: 0;
+    width: 99.9%;
+    max-width: 999px;
+    background: #FBEAEB;
+    padding: 5px 20px;
+    border: 1px solid #ccc;
+}
 .chat_footer textarea{
-    border-radius: 10px;
+    border: none;
+    outline: none;
     width: 100%;
-    height: 40px;
+    background: #FBEAEB;
+    height: 50px;
+    resize: none;
+    padding: 15px 15px 15px 0;
+    font-size: 0.95rem;
     margin: 5px;
     border-width: 1px;
-    padding-left: 5px;
     max-height: 200px;
 
-}
+} 
 .chat_body .chat p{
     white-space: pre-wrap;
 }
@@ -69,13 +95,6 @@
     align-items: center;
 
 }
-.send_button{
-    border-radius: 10px;
-    height: 40px;
-    width: 70px;
-    border-width: 1px;
-}
-
 header h2{
    font-size: 2.4rem;
 }
@@ -97,3 +116,67 @@ header h2{
         overflow-y: auto;
     }
 }
+.speech-bubble {
+    position: relative;
+    padding: 10px;
+    background-color: #f5f5f5; /* You can change this to any color */
+    border-radius: 5px;
+    width: 200px; /* Adjust width as needed */
+    margin-left: 50px; /* Giving space for the bubble tail */
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    top: 50%; /* Centers the tail vertically */
+    left: 0; /* Position of the tail */
+    transform: translate(-100%, -50%); /* Adjusts the position of the tail */
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #f5f5f5; /* Color of the speech bubble */
+}
+img{
+    height: 9vh;
+    width: 10vh;
+    display: block;
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin: 10px 0;
+}
+/* .send_button{
+    border-radius: 10px;
+    height: 40px;
+    width: 70px;
+    border-width: 1px;
+} */
+.fa-paper-plane{
+    align-self: flex-end;
+    color: #00539C;
+    cursor: pointer;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    font-size: 1.35rem;
+    padding-top: 15px;
+    padding-right: 10px;
+}
+.chat_footer textarea:valid ~ i{
+    visibility: visible;
+}
+ul.chat_body {
+    max-height: 400px; /* You can adjust this height */
+    overflow-y: auto;
+}
+
+/* 2C2828 */

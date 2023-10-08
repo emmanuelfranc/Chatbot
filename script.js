@@ -21,7 +21,7 @@ function displayGreeting(){
 window.onload = displayGreeting();
 const mainChat = document.querySelector(".chat_body")
 const chatInput = document.querySelector(".chat_footer textarea")
-const sendChatBtn = document.querySelector(".send_button")
+const sendChatBtn = document.querySelector(".fa-paper-plane")
 const chatbox = document.querySelector(".chat_body")
 
 
