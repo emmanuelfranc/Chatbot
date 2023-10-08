@@ -15,15 +15,15 @@
 }
 .chatbot{
      width: 100%;
-    max-width: 1000px; /*Limiting maximum width for larger screens */
+    max-width: 600px; /*Limiting maximum width for larger screens */
     margin: 0 auto;
-    border: 1px solid #ccc;
+    border: 0 solid #ccc;
     /* border-radius: 10px; */
     display: flex;
     flex-direction: column;
     height: 100vh; /*Taking the full viewport height */
     background-color: #FBEAEB; /*A light gray background for the entire chatbot */
-
+    box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.1);
 }
 .chatbot .chat_body{
     flex: 1;
@@ -38,9 +38,6 @@
     /* margin-right: 10px; Optional: Adds some spacing between the text and the icon */
 }
 
-.incoming_chat .fa-robot {
-    display: inline-block;
-}
 .incoming_chat, .outgoing_chat{
     max-width: 70%;
     padding: 10px 15px;
@@ -68,7 +65,7 @@
     position: absolute;
     bottom: 0;
     width: 99.9%;
-    max-width: 999px;
+    max-width: 600px;
     background: #FBEAEB;
     padding: 5px 20px;
     border: 1px solid #ccc;
@@ -85,6 +82,8 @@
     margin: 5px;
     border-width: 1px;
     max-height: 200px;
+    transition: border-color 0.3s;
+
 
 } 
 .chat_body .chat p{
@@ -178,5 +177,13 @@ ul.chat_body {
     max-height: 400px; /* You can adjust this height */
     overflow-y: auto;
 }
-
+.incoming_chat, .outgoing_chat {
+    box-shadow: 3px 3px 5px rgba(0.1, 0.1, 0.1, 0.1);  /* Horizontal, Vertical, Blur, Spread, Color */
+}
+textarea { /* Adjust as needed */
+    
+}
+.chat_footer textarea:focus {
+    border-color: #00539C; /* You can adjust the color */
+}
 /* 2C2828 */
