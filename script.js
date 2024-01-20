@@ -26,7 +26,7 @@ const chatbox = document.querySelector(".chat_body")
 
 
 let userMsg;
-const API_KEY = "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"
+const API_KEY = "API_KEY"
 const inputHeight = chatInput.scrollHeight
 
 const createChatLi = (message, className) =>{
